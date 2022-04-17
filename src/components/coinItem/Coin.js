@@ -22,12 +22,12 @@ const Coin = ({
       <p className="coinVolume">Volume (24H): ${volume.toLocaleString()}</p>
       {priceChange < 0 ? (
         <div className="priceContainerDOWN">
-          <i className="fas fa-angle-down fa-2x"></i>
+          <i className="fa-solid fa-angle-down"></i>
           <p className="priceChange">{priceChange.toFixed(2)}%</p>
         </div>
       ) : (
         <div className="priceContainerUP">
-          <i className="fas fa-angle-up fa-2x"></i>
+          <i className="fa-solid fa-angle-up"></i>
           <p className="priceChange">{priceChange.toFixed(2)}%</p>
         </div>
       )}

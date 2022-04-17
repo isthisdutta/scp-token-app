@@ -46,7 +46,8 @@
     font-size: 1rem;
     color: white;
     padding: 1rem;
-    background-color: #2fa055;
+    background-color: #73c08d;
+    border-radius: 1rem;
 }
 
 .priceContainerDOWN {
@@ -57,9 +58,10 @@
     width: 100%;
     border: none;
     font-size: 1rem;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 1rem;
     background-color: #9c3a3a;
+    border-radius: 1rem;
 }
 
 svg {
