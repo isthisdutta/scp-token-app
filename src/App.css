@@ -16,23 +16,33 @@
   flex-wrap: wrap;
   margin-top: 30px;
   color: #fff;
+  background-color: transparent;
 }
 
 .header {
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
+  background-color: transparent;
 }
 
 .inputField {
   padding-left: 16px;
   font-size: 14px;
-  width: 260px;
+  width: auto;
   height: 42px;
   border-radius: 4px;
   border: none;
   box-shadow: 0 0 3pt 2pt white;
   color: #e2e2e2;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.App1 {
+  background: rgb(63,94,251);
+  background: linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
 
 @media (max-width: 520px) {

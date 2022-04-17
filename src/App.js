@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Coin from "./components/coinItem/Coin";
+import AuthenticationButton from "./components/AuthenticationButton";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -28,35 +29,38 @@ function App() {
   );
 
   return (
-    <div>
-      <div className="header">
-        <h1 className="brand">
-          <i className="fas fa-moon"></i> CoinMoon
-        </h1>
-        <form>
-          <input
-            className="inputField"
-            type="text"
-            onChange={handleChange}
-            placeholder="Search a Coin"
-          />
-        </form>
-      </div>
-      <div className="coinsContainer">
-      {filteredCoins.map((coin) => {
-          return (
-            <Coin
-              key={coin.id}
-              name={coin.name}
-              price={coin.current_price}
-              symbol={coin.symbol}
-              marketcap={coin.market_cap}
-              volume={coin.total_volume}
-              image={coin.image}
-              priceChange={coin.price_change_percentage_24h}
+    <div className="App1">  
+      <div>
+        <div className="header">
+          <h1 className="brand">
+            <i className="fas fa-bitcoin-sign"></i> BitxChange 
+          </h1>
+          <form>
+            <input
+              className="inputField"
+              type="text"
+              onChange={handleChange}
+              placeholder="Search a Coin"
             />
-          );
-        })}
+          </form>
+          <AuthenticationButton />
+        </div>
+        <div className="coinsContainer">
+        {filteredCoins.map((coin) => {
+            return (
+              <Coin
+                key={coin.id}
+                name={coin.name}
+                price={coin.current_price}
+                symbol={coin.symbol}
+                marketcap={coin.market_cap}
+                volume={coin.total_volume}
+                image={coin.image}
+                priceChange={coin.price_change_percentage_24h}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
