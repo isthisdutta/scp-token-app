@@ -1,4 +1,5 @@
 import React from 'react';
+//imports 'useAuth0' from '@auth0.auth0react' which provides for the logout functionality and generates the Logout Button
 import { useAuth0 } from '@auth0/auth0-react';
 
 const LogoutButton = () => {

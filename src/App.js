@@ -1,13 +1,21 @@
+// Used to make API Requests
 import axios from "axios";
+
 import { useEffect, useState } from "react";
 import "./App.css";
+
+// Imports coin.js which displays all the different coins on the exchange in a card like manner
 import Coin from "./components/coinItem/Coin";
+
+// Imports AuthenticationButton.js which adds the appropriate login/logout button based on status
 import AuthenticationButton from "./components/AuthenticationButton";
 
 function App() {
+  // initializes these variables to an empty array and empty strings 
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
 
+  // accesses the coingecko API using axios, and sets the received data using setCoins()
   useEffect(() => {
     axios
       .get(
@@ -20,10 +28,12 @@ function App() {
       .catch((error) => console.error(error));
   }, []);
 
+  // function to initailze coin filter when there is any change
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
 
+  // reduces any user input to lowercase 
   const filteredCoins = coins.filter((coin) =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   );

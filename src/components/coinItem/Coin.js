@@ -1,5 +1,6 @@
 import React from "react";
 import "./Coin.css";
+//Sets the coin data received from the APi in a card like fashion
 
 const Coin = ({
   name,
